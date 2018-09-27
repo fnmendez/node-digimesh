@@ -9,12 +9,12 @@
         "email": "rwestlun@gmail.com"
     },
     "license": "BSD-2-Clause",
+    "main": "digimesh",
     "author": {
         "name": "Randy Westlund",
         "email": "rwestlun@gmail.com",
         "url": "http://www.textplain.net"
     },
-    "main": "digimesh",
     "repository": {
         "type": "git",
         "url": "https://github.com/rwestlund/node-digimesh.git"
