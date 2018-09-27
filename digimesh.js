@@ -8,9 +8,6 @@ var util = require('util');
 // needed for serial comms
 var SerialPort = require('serialport');
 
-console.log('HEREEEEEEEEEEE')
-console.log(SerialPort)
-
 // the main class
 // config:  device -- device node, eg /dev/ttyU0
 //          baud -- serial baud rate
