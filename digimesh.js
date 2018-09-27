@@ -140,7 +140,6 @@ var XbeeDigiMesh = function(config, callback) {
         // set up with three functions:
         // update our NT value, drop the return status
         that.get_nt(function(err, data) {
-
             num_complete++; if (num_complete === 3) complete();
         });
         // get high and low parts of local address
