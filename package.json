@@ -23,7 +23,7 @@
         "test": "./node_modules/.bin/mocha --bail"
     },
     "dependencies": {
-        "serialport": "4.0.1"
+        "serialport": "7.0.2"
     },
     "devDependencies": {
         "mocha": "2.3.4",
