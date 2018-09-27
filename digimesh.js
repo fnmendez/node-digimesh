@@ -6,7 +6,10 @@
 var EventEmitter = require('events');
 var util = require('util');
 // needed for serial comms
-var SerialPort = require('serialport').SerialPort;
+var SerialPort = require('serialport');
+
+console.log('HEREEEEEEEEEEE')
+console.log(SerialPort)
 
 // the main class
 // config:  device -- device node, eg /dev/ttyU0
@@ -115,7 +118,7 @@ var XbeeDigiMesh = function(config, callback) {
     // open the serial port, disable flow control, don't use a buffer
     var that = this;
     this.serial_port = new SerialPort(this.device, {
-        baudrate: this.baud,
+        baudRate: this.baud,
         xon: false,
         xoff: false,
         xany: false,
@@ -123,7 +126,7 @@ var XbeeDigiMesh = function(config, callback) {
         rtscts: true,
         bufferSize: 1,
         hupcl: false,
-    }, 
+    },
     // on open event
     function(err) {
         // call when all three are done
@@ -536,7 +539,7 @@ XbeeDigiMesh.prototype.write_buf = function(buf) {
     var that = this;
     // make sure nothing is using the serial port
     this.serial_port.drain(function() {
-            
+
         // print the buffer // DEBUG
         // TODO why does this have to be 'hex', but others need 16?
         //console.log(buf.toString('hex').replace(/(.{2})/g, "$1 "));
